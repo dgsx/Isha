@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Contact Us</title>
+</head>
+
+<body bgcolor="#F7CD2E">
+<center>
+	<h1>Contact Us</h1>
+    <p>We'd love to hear from you! Please use the form below to get in touch with us.</p>
+	<!-- <form>
+	Name:
+	<input type="text" name="name"id="name" placeholder="Enter Your Name">
+	<br>
+	Email:
+	<input type="text" name="email" placeholder="Enter Your Email">
+	<br>
+	Message:
+	<textarea name="message" placeholder="Enter Your Message">
+	</textarea>
+	<br>
+	Address:
+	<input size="100" type="text" name="address" placeholder="Enter Your Address">
+	<br>
+	<input type="button" value="submit" onclick="contact()">
+	<input type="reset">
+</form> -->
+
+<form name="contactus">
+	<table>
+		<tr>Name: </tr>
+		</tr>
+			<input type="text" name="name" id="name">
+		</tr>
+		<br>
+		<tr>Email: </tr>
+		<tr>
+			<input type="text" name="email" id="email"> 
+		</tr>
+		<br>
+		<tr>Message: </tr>
+		<tr>
+			<input type="text" name="msg" id="msg">
+		</tr>
+		<br>
+		<input type="button" value="submit" onclick="contact()">
+		<input type="reset">
+	</table>
+</form>
+<script language="javascript">
+function contact(){
+	var name = document.getElementById("name").value;
+	var email=document.getElementById("email").value;
+	var msg=document.getElementById("msg").value;
+
+	if (name == ""){
+		alert("Please enter your name");
+	}
+	else if(email == ""){
+		alert("Please enter your email");
+	}
+	else if(!email.includes("@")){
+		alert("Please enter a valid Email")
+	}
+	else if(msg==""){
+		alert("Please enter your message");
+	}
+	else{
+	alert("Hey "+name+"\nThanks for getting in touch!");
+	}
+}
+</script>
+</center>
+</body>
+</html>

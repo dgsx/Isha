@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Account Creation</title>
+</head>
+<center>
+<body bgcolor="FFD56F">
+  <h1>Join Our spiritual Ride</h1>
+  <form>
+    <table>
+      <tr>
+        <td>Email: </td>
+        <td><input type="text" name="email" id="email"></td>
+      </tr>
+      <tr>
+        <td>Username: </td>
+        <td><input type="text" name="uname" id="uname"></td>
+      </tr>
+      <tr>
+        <td>Password: </td>
+        <td><input type="password" name="pass" id="pass"></td>
+      </tr>
+      <tr>
+        <td>Confirm Password: </td>
+        <td><input type="password" name="cpass" id="cpass"></td>
+      </tr>
+    </table>
+    <br>
+      <input type="submit" value="Signup" onclick="createAccount()">
+      <input type="reset">
+  </form>
+  <!-- <form name="acc">
+	Username:<br>
+    <input type="text" name="username"><br>
+    Password:<br>
+    <input type="password" name="password"><br>
+    Confirm Password:<br>
+    <input type="password" name="cpassword"><br><br>
+    <input type="submit" value="Signup" onclick="createAccount()">
+    <input type="reset" name="reset" >
+	else if(!email.includes("@")){
+
+  </form> -->
+
+  <script>
+    function createAccount() {
+      var email = document.getElementById("email").value;
+      var username = document.getElementById('uname').value;
+      var password = document.getElementById('pass').value;
+      var cpassword = document.getElementById('cpass').value;
+      if (!email.includes("@")){
+        alert("Please enter valid email")
+      }
+      else if (username==""){
+        alert("Please enter valid username")
+      }
+      else if(password==""){
+      alert("Please don't leave password empty")      
+      }
+      else if (password === cpassword) {
+        alert('Account created!\nUsername: ' + username + '\nPassword: ' + password);
+      } else {
+        alert("Pls enter correct password in both fields");
+      }
+    }
+  </script>
+  <br>
+  <br>
+  <img src="./static/login.jpg" width="189" height="190">
+</body>
+</center>
+</html>
